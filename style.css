@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  align-items: center;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-around;
+  background: rgb(19, 19, 97);
+  color: white;
+  font-size: 1.2rem;
+  height: 40px;
+}
+.top .text {
+  font-size: 1.5rem;
+}
+
+.no {
+  margin: 0px 10px;
+  color: yellowgreen;
+}
+
+.navbar li,
+a,
+button {
+  text-decoration: none;
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.logo {
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+}
+.navlink {
+  list-style: none;
+}
+.navlink li {
+  display: inline-block;
+  padding: 0 1.5rem;
+}
+.navlink li a {
+  color: black;
+  transition: all 0.3s ease 0s;
+  font-size: 1.3rem;
+}
+.navlink li a:hover {
+  color: yellowgreen;
+}
+header button {
+  font-size: 1.2rem;
+  background: yellowgreen;
+  padding: 0.5rem 2rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+  opacity: 0.8;
+}
+.logotext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logotext span {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(19, 19, 97);
+  margin-left: 2px;
+}
+.toggle {
+  text-align: right;
+  font-size: 2rem;
+  color: yellowgreen;
+  cursor: pointer;
+  display: none;
+}
+header {
+  top: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 999;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    display: block;
+  }
+  .navbar ul {
+    width: 100%;
+  }
+  .navbar ul li {
+    display: block;
+    text-align: center;
+  }
+}
+.sec1 {
+  overflow: hidden;
+}
+/* carousal */
+.slider {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  display: flex;
+  align-items: baseline;
+  position: absolute;
+  color: white;
+  top: 25%;
+  left: 10%;
+}
+/* .content .content-row {
+}
+.slide.current .content {
+  /* opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3;} */
+
+.content button {
+  margin: 10px;
+  font-size: 1.2rem;
+  background: yellowgreen;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.content button:hover {
+  opacity: 0.9;
+}
+
+.content-row h1 {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.sec1 button#next {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+}
+.sec1 button#prev {
+  position: absolute;
+  top: 60%;
+  left: 20px;
+}
+
+.button button {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 12px;
+}
+.slide:first-child {
+  background: url(images/slide1.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+  background: url(images/slide2.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(3) {
+  background: url(images/slide3.jpg) no-repeat center center/cover;
+}
+
+.overlap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#register {
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  height: 320px;
+  width: 250px;
+}
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #eee;
+  color: rgb(7, 7, 39);
+  border-bottom: 2px solid rgb(7, 7, 46);
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #eee;
+  color: rgb(23, 23, 77);
+  transform: rotateY(180deg);
+  border-bottom: 2px solid rgb(7, 7, 46);
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.frontface {
+  display: flex;
+  flex-direction: column;
+}
